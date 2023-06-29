@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="facility"
+            type="com.propertysearchassignment.app.model.data.Facility" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginHorizontal="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{facility.name}"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>
